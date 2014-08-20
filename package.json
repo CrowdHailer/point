@@ -1,0 +1,30 @@
+{
+  "name": "point",
+  "version": "0.0.0",
+  "description": "2D point object",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/minijasminenode2 test.js --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/CrowdHailer/point.git"
+  },
+  "keywords": [
+    "2D",
+    "point",
+    "geometry",
+    "svg",
+    "bbox",
+    "rectangles"
+  ],
+  "author": "Peter Saxton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CrowdHailer/point/issues"
+  },
+  "homepage": "https://github.com/CrowdHailer/point",
+  "devDependencies": {
+    "minijasminenode2": "^1.0.0"
+  }
+}
