@@ -20,9 +20,15 @@ describe('Point', function () {
         it('should not validate plain objects', function () {
             expect(Point.isPoint({x: 2, y: 3})).toBe(false);
         });
+
+        it('should default to origin point', function () {
+            var pt = Point.create();
+            expect(pt.x).toEqual(0);
+            expect(pt.y).toEqual(0);
+        });
     });
 
-    describe('geometric operations', function () {
+    describe('simple geometric operations', function () {
         var p1, p2, p3;
         beforeEach(function () {
             p1 = Point.create(2, 3);
@@ -45,6 +51,25 @@ describe('Point', function () {
             p3 = Point.scalarMultiply(3, p1);
             expect(p3.x).toEqual(6);
             expect(p3.y).toEqual(9);
+        });
+    });
+
+    describe('fitting to bounding box', function () {
+        var p1, p2;
+        beforeEach(function () {
+            p1 = Point.create(2, 2);
+        });
+
+        it('should fit a landscape point', function () {
+            p2 = Point.fitWithin(p1, Point.create(4, 2));
+            expect(p2.x).toEqual(2);
+            expect(p2.y).toEqual(1);
+        });
+
+        it('should fit a portrait point', function () {
+            p2 = Point.fitWithin(p1, Point.create(2, 4));
+            expect(p2.x).toEqual(1);
+            expect(p2.y).toEqual(2);
         });
     });
 });

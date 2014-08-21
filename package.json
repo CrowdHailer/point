@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/minijasminenode2 test.js --verbose",
-    "lint": "./node_modules/.bin/jslint --sloppy index.js && ./node_modules/.bin/jslint --sloppy --predef it --predef expect --predef describe --predef beforeEach test.js"
+    "lint": "./node_modules/.bin/jslint index.js && ./node_modules/.bin/jslint --sloppy --predef it --predef expect --predef describe --predef beforeEach test.js"
   },
   "repository": {
     "type": "git",

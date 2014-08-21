@@ -1,6 +1,8 @@
+'use strict';
+
 function Point(x, y) {
-    this.x = x;
-    this.y = y;
+    this.x = x || 0;
+    this.y = y || 0;
 }
 
 exports.create = function (x, y) {
@@ -21,4 +23,12 @@ exports.subtract = function (p, q) {
 
 exports.scalarMultiply = function (a, p) {
     return new Point(a * p.x, a * p.y);
+};
+
+exports.fitWithin = function (p, q) {
+    var xScale = p.x / q.x,
+        yScale = p.y / q.y,
+        scale = xScale > yScale ? yScale : xScale;
+
+    return exports.scalarMultiply(scale, q);
 };
