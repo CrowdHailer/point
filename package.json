@@ -1,6 +1,6 @@
 {
-  "name": "point",
-  "version": "0.0.0",
+  "name": "2d-point",
+  "version": "0.8.0",
   "description": "2D point object",
   "main": "index.js",
   "scripts": {
