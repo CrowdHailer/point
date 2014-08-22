@@ -53,7 +53,7 @@ describe('Point', function () {
         });
 
         it('should be able to multiply by a scalar', function () {
-            p3 = Point.scalarMultiply(3, p1);
+            p3 = Point.multiply(3, p1);
             expect(p3.x).toEqual(6);
             expect(p3.y).toEqual(9);
         });

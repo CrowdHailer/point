@@ -22,7 +22,7 @@ exports.subtract = function (p, q) {
     return new Point(p.x - q.x, p.y - q.y);
 };
 
-exports.scalarMultiply = function (a, p) {
+exports.multiply = function (a, p) {
     return new Point(a * p.x, a * p.y);
 };
 
@@ -31,7 +31,7 @@ exports.fitWithin = function (p, q) {
         yScale = p.y / q.y,
         scale = xScale > yScale ? yScale : xScale;
 
-    return exports.scalarMultiply(scale, q);
+    return exports.multiply(scale, q);
 };
 
 exports.fitOnce = function (p, q) {
@@ -39,5 +39,5 @@ exports.fitOnce = function (p, q) {
         yScale = p.y / q.y,
         scale = xScale < yScale ? yScale : xScale;
 
-    return exports.scalarMultiply(scale, q);
+    return exports.multiply(scale, q);
 };
