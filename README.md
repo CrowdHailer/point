@@ -102,14 +102,15 @@ Point.fitWithin(container, portrait);
 // => {x: 2, y: 4}
 ```
 
-TODO
-fit within to deal with zeros ?
-negate ?
-Curry methods ?
-comparison methods ?
-conditionally make svg point if available ?
-tests in browser ?
-dot product ?
-convert to radial ?
-furthest ?
-nearest ?
+## Considered extensions 
+
+- fit within to deal with zeros ?
+- negate ?
+- Curry methods ?
+- comparison methods ?
+- conditionally make svg point if available ? No
+- tests in browser ? No
+- dot product ?
+- convert to radial ? No
+- furthest ?
+- nearest ?
