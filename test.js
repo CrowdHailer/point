@@ -29,7 +29,7 @@ describe('Point', function () {
 
         it('should create a frozen object', function () {
             var pt = Point.create();
-            expect(Object.isFrozen(pt)).toBe(true)
+            expect(Object.isFrozen(pt)).toBe(true);
         });
     });
 
