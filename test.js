@@ -26,6 +26,11 @@ describe('Point', function () {
             expect(pt.x).toEqual(0);
             expect(pt.y).toEqual(0);
         });
+
+        it('should create a frozen object', function () {
+            var pt = Point.create();
+            expect(Object.isFrozen(pt)).toBe(true)
+        });
     });
 
     describe('simple geometric operations', function () {
