@@ -18,3 +18,7 @@ Curry methods ?
 comparison methods ?
 conditionally make svg point if available ?
 tests in browser ?
+dot product ?
+convert to radial ?
+furthest ?
+nearest ?
