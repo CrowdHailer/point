@@ -32,3 +32,11 @@ exports.fitWithin = function (p, q) {
 
     return exports.scalarMultiply(scale, q);
 };
+
+exports.fitOnce = function (p, q) {
+    var xScale = p.x / q.x,
+        yScale = p.y / q.y,
+        scale = xScale < yScale ? yScale : xScale;
+
+    return exports.scalarMultiply(scale, q);
+};

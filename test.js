@@ -72,4 +72,23 @@ describe('Point', function () {
             expect(p2.y).toEqual(2);
         });
     });
+
+    describe('fitting to one bounding dimension', function () {
+        var p1, p2;
+        beforeEach(function () {
+            p1 = Point.create(2, 2);
+        });
+
+        it('should fit a landscape point', function () {
+            p2 = Point.fitOnce(p1, Point.create(8, 4));
+            expect(p2.x).toEqual(4);
+            expect(p2.y).toEqual(2);
+        });
+
+        it('should fit a portrait point', function () {
+            p2 = Point.fitOnce(p1, Point.create(4, 8));
+            expect(p2.x).toEqual(2);
+            expect(p2.y).toEqual(4);
+        });
+    });
 });
